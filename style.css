@@ -1932,3 +1932,325 @@ footer {
     }
 
 }
+/* =========================================================
+   PREMIUM ANIMATIONS — VEDA INTERIOR DESIGN STUDIO
+   ========================================================= */
+
+/* ---------- Smooth page scrolling ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ---------- Page loading ---------- */
+
+body {
+    animation: pageLoad 0.8s ease both;
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ---------- Hero entrance animation ---------- */
+
+.hero-content {
+    animation: heroText 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-image {
+    animation: heroImage 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+@keyframes heroText {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroImage {
+    from {
+        opacity: 0;
+        transform: translateX(45px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+/* ---------- Hero image gentle floating ---------- */
+
+.hero-image img {
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* ---------- Section reveal animation ---------- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ---------- Section headings ---------- */
+
+.section-title {
+    transition: transform 0.6s ease;
+}
+
+.section-title:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Service cards ---------- */
+
+.service-card {
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.5s ease,
+        border-color 0.5s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(36, 56, 47, 0.12);
+}
+
+
+/* ---------- Project images ---------- */
+
+.project-card {
+    overflow: hidden;
+}
+
+.project-card img {
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.8s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.92);
+}
+
+
+/* ---------- Project overlay ---------- */
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(24, 42, 34, 0.35),
+        transparent 50%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::after {
+    opacity: 1;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(36, 56, 47, 0.16);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+
+/* ---------- Navbar links ---------- */
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.35s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ---------- About image ---------- */
+
+.about-image img {
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ---------- Why Veda items ---------- */
+
+.why-item {
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.why-item:hover {
+    transform: translateX(8px);
+}
+
+
+/* ---------- Process steps ---------- */
+
+.process-step {
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ---------- Contact cards ---------- */
+
+.contact-item {
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(6px);
+}
+
+
+/* ---------- WhatsApp floating button ---------- */
+
+.whatsapp-float {
+    animation: whatsappPulse 2.5s ease-in-out infinite;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    animation: none;
+    transform: scale(1.08);
+}
+
+@keyframes whatsappPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    50% {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+    }
+}
+
+
+/* ---------- CTA image ---------- */
+
+.cta-section {
+    transition: background-position 1s ease;
+}
+
+
+/* ---------- Form fields ---------- */
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(36, 56, 47, 0.08);
+}
+
+
+/* ---------- Reduced motion accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
